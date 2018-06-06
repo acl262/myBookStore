@@ -45,3 +45,24 @@ hr {
     
     
 }
+
+
+.section-headline {
+    
+    font-family: 'Times New Roman'， Times, serif;
+    font-size:24px;
+    color:#fff;
+    margin:auto;
+    text-align: center;
+    margin-top: 90px;
+    
+}
+
+
+.section-headline span{
+    
+    background-color:#231F20;
+    padding: 5px 22px;
+    
+    
+}
