@@ -1,7 +1,6 @@
 package com.bookstore.repository;
 
 import java.util.Date;
-import java.util.stream.Stream;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -17,10 +16,10 @@ public interface PasswordRestTokenRepository
 
     PasswordResetToken findByUser(User user);
 
-    Stream<PasswordResetToken> findAllByExpiryDateLessThan(Date now);
+    //  Stream<PasswordResetToken> findAllByExpiryDateLessThan(Date now);
 
     @Modifying
-    @Query("delete from PasswordResetToken t where t.expirydate <= ?1")
+    @Query("delete from PasswordResetToken t where t.expiryDate <= ?1")
     void deleteAllExpiredSince(Date now);
 
 }
