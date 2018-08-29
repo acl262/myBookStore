@@ -18,7 +18,7 @@ public class MailConstructor {
     public SimpleMailMessage constructResetTokenEmail(String contextPath,
             Locale locake, String token, User user, String password) {
 
-        String url = contextPath = "/newUser?token=" + token;
+        String url = contextPath + "/newUser?token=" + token;
         String message = "\nPlease click on theis link to verify your email and edit your personal information. Your password is: \n"
                 + password;
         SimpleMailMessage email = new SimpleMailMessage();

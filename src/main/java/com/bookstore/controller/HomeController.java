@@ -147,6 +147,8 @@ public class HomeController {
                 userDetails.getAuthorities());
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        
+        model.addAttribute("user", user);
 
         model.addAttribute("classActiveEdit", true);
         return "myProfile";
