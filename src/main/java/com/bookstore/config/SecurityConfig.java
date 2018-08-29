@@ -28,8 +28,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return SecurityUtility.passwordEncoder();
     }
 
-    private static final String[] PUBLIC_MATCHERS = { "/css/**", "/js/**",
-            "/image/**", "/", "/myAccount" };
+    private static final String[] PUBLIC_MATCHERS = { 
+    		"/css/**",
+    		"/js/**",
+            "/image/**",
+            "/", 
+            "/newUser",
+            
+            "/forgetPassword" 
+    };
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
